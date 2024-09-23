@@ -1,0 +1,7 @@
+export const standard_username: string = 'standard_user'
+export const locked_out_user: string = 'locked_out_user'
+export const problem_user: string = 'problem_user'
+export const performance_glitch_user: string = 'performance_glitch_user'
+export const error_user: string =  'error_user'
+export const visual_user: string = 'visual_user'
+export const pw: string = 'secret_sauce'
