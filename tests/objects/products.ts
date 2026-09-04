@@ -6,3 +6,4 @@ export const iconSortProducts: string = '[data-test="product-sort-container"]';
 //Backpack
 export const lblBackpack:string = '[data-test="item-4-title-link"]';
 export const btnAddBackPack:string = '[data-test="add-to-cart-sauce-labs-backpack"]';
+export const lblItemPrice:string = '[data-test="inventory-item-price"]';

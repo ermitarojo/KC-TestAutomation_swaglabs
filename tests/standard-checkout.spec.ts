@@ -2,7 +2,7 @@ import {test, expect } from '@playwright/test';
 import {url} from './globalvariables/globalvariables'
 import {standard_username,pw } from './globalvariables/login_data';
 import {login,addtocart,fillCustomerDetails } from './helpers/helpers';
-import {btnAddBackPack, iconCart, lblProducts} from './objects/products'
+import {btnAddBackPack, iconCart, lblItemPrice, lblProducts} from './objects/products'
 import {btnCheckout, btnContinue, btnFinish, btnHome, iconCheck, lblCheckoutPage, lblComplete } from './objects/checkout';
 
 test('Standard-checkout', async ({ page }) => {
@@ -20,7 +20,7 @@ test('Standard-checkout', async ({ page }) => {
     await expect(page.locator(lblCheckoutPage)).toBeVisible();
     await expect(page.locator(lblCheckoutPage)).toHaveText('Your Cart')
     //Assert price
-        //TODO
+    await expect(page.locator(lblItemPrice)).toHaveText('$29.99');
     //checkout
     await page.locator(btnCheckout).click();
     //Fill customer details
